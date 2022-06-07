@@ -33,7 +33,7 @@ import Layout from "@/layout";
 export const constantRoutes = [
   {
     path: "/login",
-    component: () => import("@/views/login/index"),
+    component: () => import("@/views/login/login"),
     hidden: true,
   },
 
@@ -104,6 +104,18 @@ export const constantRoutes = [
       },
     ],
   },
+  // {
+  //   path: "/register",
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: "index",
+  //       name: "Register",
+  //       component: () => import("@/views/register/index"),
+  //       meta: { title: "用户注册", icon: "form" },
+  //     },
+  //   ],
+  // },
 
   // 404 page must be placed at the end !!!
   { path: "*", redirect: "/404", hidden: true },
