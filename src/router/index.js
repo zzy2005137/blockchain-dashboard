@@ -104,6 +104,32 @@ export const constantRoutes = [
       },
     ],
   },
+  {
+    path: "/identity",
+    component: Layout,
+    redirect: "identity/index",
+    meta: { title: "身份管理", icon: "el-icon-s-help" },
+    children: [
+      {
+        path: "index",
+        name: "Identity",
+        component: () => import("@/views/identity/index"),
+        meta: { title: "设备列表", icon: "tree" },
+      },
+      {
+        path: "detail/:id",
+        name: "detail",
+        component: () => import("@/views/identity/detail"),
+        meta: { title: "设备详情", icon: "tree" },
+      },
+      {
+        path: "register",
+        name: "register",
+        component: () => import("@/views/identity/register"),
+        meta: { title: "身份注册", icon: "form" },
+      },
+    ],
+  },
   // {
   //   path: "/register",
   //   component: Layout,
