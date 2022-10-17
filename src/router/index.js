@@ -32,6 +32,10 @@ import Layout from "@/layout";
  */
 export const constantRoutes = [
   {
+    path: "/test",
+    component: () => import("@/views/Test.vue"),
+  },
+  {
     path: "/login",
     component: () => import("@/views/login/login"),
     hidden: true,
@@ -117,7 +121,7 @@ export const constantRoutes = [
         meta: { title: "设备列表", icon: "tree" },
       },
       {
-        path: "detail/:id",
+        path: "detail/:id?",
         name: "detail",
         component: () => import("@/views/identity/detail"),
         meta: { title: "设备详情", icon: "tree" },

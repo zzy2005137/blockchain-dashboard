@@ -29,7 +29,7 @@
       border
     >
       <el-descriptions-item
-        v-for="(value, key) in equipments[index]['可检试验项目']"
+        v-for="(value, key) in equipments[id]['可检试验项目']"
         :key="key"
       >
         <template slot="label" :width="50">
@@ -39,6 +39,7 @@
       </el-descriptions-item>
     </el-descriptions>
     <!-- END可检试验项目 -->
+    <!-- <el-button @click="check">check</el-button> -->
   </div>
 </template>
 
@@ -48,7 +49,7 @@ export default {
   //   props: ["id"],
   data() {
     return {
-      index: 0,
+      // index: 0,
     };
   },
   computed: {
@@ -57,7 +58,7 @@ export default {
     }),
     plainInfo() {
       let obj = {};
-      let src = this.$store.state.identity.identities[this.index];
+      let src = this.$store.state.identity.identities[this.id];
       for (let [key, val] of Object.entries(src)) {
         if (key != "可检试验项目" && key != "可检物资类别") {
           //   obj.key = val;
@@ -67,17 +68,26 @@ export default {
       }
       return obj;
     },
+    id() {
+      let id = Number(this.$route.params.id);
+      if (isNaN(id)) {
+        return 0;
+      } else {
+        return id;
+      }
+    },
   },
   methods: {
     check() {
-      console.log(this.$route.params.id);
+      // console.log(this.$route.params.id);
+      console.log(this.id);
     },
   },
-  created() {
-    if (this.$route.params.id !== ":id") {
-      this.index = this.$route.params.id;
-    }
-  },
+  // created() {
+  //   if (this.$route.params.id !== ":id") {
+  //     this.index = this.$route.params.id;
+  //   }
+  // },
 };
 </script>
 

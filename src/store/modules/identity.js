@@ -1,6 +1,7 @@
 export default {
   namespaced: true,
   state: () => ({
+    // 哈希算法 sha256
     identities: [
       {
         工位编号: "A1",
@@ -84,6 +85,23 @@ export default {
         工位编号: "A4",
         设备型号: "TM2-004",
         所属机构: "江苏省南京市电力科学研究院",
+        可检物资类别: ["避雷器"],
+        可检试验项目: [
+          "直流参考电压试验",
+          "0.75倍直流参考电压下漏电流试验",
+          "密封试验",
+        ],
+        生产厂家: "上海思创电气设备有限公司",
+        负责人: "宋思齐",
+        身份ID:
+          "23a868558231e9b7431c58cb18a578447944322911e0a23b1dbbabf3b689fdfb",
+        // privateKey: `MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAg544VsNa20GxLA7UvzmvELY8t390Yc6+wgUQYaaNdefJChmtCHttvz9SOCk4OxkbB3xfFt+IWoFCW7jKtxD7fQIDAQABAkBQOLqsH2wcYaDkcrG3UChlLj45teSwzLu2NDH04vgr2VgDmo/2DHiKvHnF5pbxPob39nc9Kfk/RRlVRkIIy2YdAiEAupfYLrMvuNjUKQCAimo+qGQsZzJsg3uG4doLUF5Nve8CIQC0k2yVLTtCAgpb6kUp9+l5oHbN7669eAf0ESrLOcEJUwIgM+UVT++v/xX286xbE6P25zhtDQp+GZdabSgKa4C+2GsCIQCDDevkaKt1QJ3cD66awv6D813GIIoloJPFIyB31javWQIgFXqEpV7XK03IbXdHmOXSdhbOYr0B5iS3E8uHb+hT7io=`,
+        公钥: "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKZAtjhCrrUcpM7ZjLkxBRTovRTb3US0VpSVw2sU9MWBIvEuOvHPBeVcWK+HbSV/9ve+DgfrZ+C8heS4C0j09LUCAwEAAQ==",
+      },
+      {
+        工位编号: "A5",
+        设备型号: "TM2-005",
+        所属机构: "江苏省南京市电力科学研究院",
         可检物资类别: [
           "柱上开关设备",
           "高压电缆分支箱",
@@ -95,7 +113,83 @@ export default {
         生产厂家: "上海思创电气设备有限公司",
         负责人: "宋思齐",
         身份ID:
-          "84f2d088d86412429c2a8ed7c8ac0eeb31bfb009b697b1a64a4e4a858b226fdf",
+          "2c8731134d50b6dad57dc69a1808df9b1c4cbd856c807b7ea3d67adb232ac8fb",
+        // privateKey: `MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAg544VsNa20GxLA7UvzmvELY8t390Yc6+wgUQYaaNdefJChmtCHttvz9SOCk4OxkbB3xfFt+IWoFCW7jKtxD7fQIDAQABAkBQOLqsH2wcYaDkcrG3UChlLj45teSwzLu2NDH04vgr2VgDmo/2DHiKvHnF5pbxPob39nc9Kfk/RRlVRkIIy2YdAiEAupfYLrMvuNjUKQCAimo+qGQsZzJsg3uG4doLUF5Nve8CIQC0k2yVLTtCAgpb6kUp9+l5oHbN7669eAf0ESrLOcEJUwIgM+UVT++v/xX286xbE6P25zhtDQp+GZdabSgKa4C+2GsCIQCDDevkaKt1QJ3cD66awv6D813GIIoloJPFIyB31javWQIgFXqEpV7XK03IbXdHmOXSdhbOYr0B5iS3E8uHb+hT7io=`,
+        公钥: "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIvTBLxZq7WjEqcLDwQPhYl3BKepKuNpTy6+jQwuM+RPfPnRchFBUYT+hWgOs9WJxltPlYarqcNY5yrstH0zqK0CAwEAAQ==",
+      },
+      {
+        工位编号: "A6",
+        设备型号: "TM2-006",
+        所属机构: "江苏省南京市电力科学研究院",
+        可检物资类别: [
+          "柱上开关设备",
+          "高压电缆分支箱",
+          "环网柜",
+          "高压开关柜",
+          "隔离开关",
+        ],
+        可检试验项目: ["主回路电阻测量", "温升试验"],
+        生产厂家: "上海思创电气设备有限公司",
+        负责人: "宋思齐",
+        身份ID:
+          "e665a8f67f8b9ec715d652481bc5fdabf6932a24f5ef9190631b5b5274ba7524",
+        // privateKey: `MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAg544VsNa20GxLA7UvzmvELY8t390Yc6+wgUQYaaNdefJChmtCHttvz9SOCk4OxkbB3xfFt+IWoFCW7jKtxD7fQIDAQABAkBQOLqsH2wcYaDkcrG3UChlLj45teSwzLu2NDH04vgr2VgDmo/2DHiKvHnF5pbxPob39nc9Kfk/RRlVRkIIy2YdAiEAupfYLrMvuNjUKQCAimo+qGQsZzJsg3uG4doLUF5Nve8CIQC0k2yVLTtCAgpb6kUp9+l5oHbN7669eAf0ESrLOcEJUwIgM+UVT++v/xX286xbE6P25zhtDQp+GZdabSgKa4C+2GsCIQCDDevkaKt1QJ3cD66awv6D813GIIoloJPFIyB31javWQIgFXqEpV7XK03IbXdHmOXSdhbOYr0B5iS3E8uHb+hT7io=`,
+        公钥: "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIvTBLxZq7WjEqcLDwQPhYl3BKepKuNpTy6+jQwuM+RPfPnRchFBUYT+hWgOs9WJxltPlYarqcNY5yrstH0zqK0CAwEAAQ==",
+      },
+      {
+        工位编号: "A7",
+        设备型号: "TM2-007",
+        所属机构: "江苏省南京市电力科学研究院",
+        可检物资类别: [
+          "柱上开关设备",
+          "高压电缆分支箱",
+          "环网柜",
+          "高压开关柜",
+          "隔离开关",
+        ],
+        可检试验项目: ["主回路电阻测量", "温升试验"],
+        生产厂家: "上海思创电气设备有限公司",
+        负责人: "宋思齐",
+        身份ID:
+          "35c2bf2e5ba049c99c6fa1c677b5c2f9cde748b93ba9dd26f5707aa9f09f27cd",
+        // privateKey: `MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAg544VsNa20GxLA7UvzmvELY8t390Yc6+wgUQYaaNdefJChmtCHttvz9SOCk4OxkbB3xfFt+IWoFCW7jKtxD7fQIDAQABAkBQOLqsH2wcYaDkcrG3UChlLj45teSwzLu2NDH04vgr2VgDmo/2DHiKvHnF5pbxPob39nc9Kfk/RRlVRkIIy2YdAiEAupfYLrMvuNjUKQCAimo+qGQsZzJsg3uG4doLUF5Nve8CIQC0k2yVLTtCAgpb6kUp9+l5oHbN7669eAf0ESrLOcEJUwIgM+UVT++v/xX286xbE6P25zhtDQp+GZdabSgKa4C+2GsCIQCDDevkaKt1QJ3cD66awv6D813GIIoloJPFIyB31javWQIgFXqEpV7XK03IbXdHmOXSdhbOYr0B5iS3E8uHb+hT7io=`,
+        公钥: "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIvTBLxZq7WjEqcLDwQPhYl3BKepKuNpTy6+jQwuM+RPfPnRchFBUYT+hWgOs9WJxltPlYarqcNY5yrstH0zqK0CAwEAAQ==",
+      },
+      {
+        工位编号: "A8",
+        设备型号: "TM2-008",
+        所属机构: "江苏省南京市电力科学研究院",
+        可检物资类别: [
+          "柱上开关设备",
+          "高压电缆分支箱",
+          "环网柜",
+          "高压开关柜",
+          "隔离开关",
+        ],
+        可检试验项目: ["主回路电阻测量", "温升试验"],
+        生产厂家: "上海思创电气设备有限公司",
+        负责人: "宋思齐",
+        身份ID:
+          "a6b49bd9985773afe24eeb7e9ada252bc8fc0357fa91e55907589774cf04a958",
+        // privateKey: `MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAg544VsNa20GxLA7UvzmvELY8t390Yc6+wgUQYaaNdefJChmtCHttvz9SOCk4OxkbB3xfFt+IWoFCW7jKtxD7fQIDAQABAkBQOLqsH2wcYaDkcrG3UChlLj45teSwzLu2NDH04vgr2VgDmo/2DHiKvHnF5pbxPob39nc9Kfk/RRlVRkIIy2YdAiEAupfYLrMvuNjUKQCAimo+qGQsZzJsg3uG4doLUF5Nve8CIQC0k2yVLTtCAgpb6kUp9+l5oHbN7669eAf0ESrLOcEJUwIgM+UVT++v/xX286xbE6P25zhtDQp+GZdabSgKa4C+2GsCIQCDDevkaKt1QJ3cD66awv6D813GIIoloJPFIyB31javWQIgFXqEpV7XK03IbXdHmOXSdhbOYr0B5iS3E8uHb+hT7io=`,
+        公钥: "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIvTBLxZq7WjEqcLDwQPhYl3BKepKuNpTy6+jQwuM+RPfPnRchFBUYT+hWgOs9WJxltPlYarqcNY5yrstH0zqK0CAwEAAQ==",
+      },
+      {
+        工位编号: "A9",
+        设备型号: "TM2-009",
+        所属机构: "江苏省南京市电力科学研究院",
+        可检物资类别: [
+          "柱上开关设备",
+          "高压电缆分支箱",
+          "环网柜",
+          "高压开关柜",
+          "隔离开关",
+        ],
+        可检试验项目: ["主回路电阻测量", "温升试验"],
+        生产厂家: "上海思创电气设备有限公司",
+        负责人: "宋思齐",
+        身份ID:
+          "1b1be0ba45207a7f37e502d83105d8d0de832918b2f313f294e59919a14bda24",
         // privateKey: `MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAg544VsNa20GxLA7UvzmvELY8t390Yc6+wgUQYaaNdefJChmtCHttvz9SOCk4OxkbB3xfFt+IWoFCW7jKtxD7fQIDAQABAkBQOLqsH2wcYaDkcrG3UChlLj45teSwzLu2NDH04vgr2VgDmo/2DHiKvHnF5pbxPob39nc9Kfk/RRlVRkIIy2YdAiEAupfYLrMvuNjUKQCAimo+qGQsZzJsg3uG4doLUF5Nve8CIQC0k2yVLTtCAgpb6kUp9+l5oHbN7669eAf0ESrLOcEJUwIgM+UVT++v/xX286xbE6P25zhtDQp+GZdabSgKa4C+2GsCIQCDDevkaKt1QJ3cD66awv6D813GIIoloJPFIyB31javWQIgFXqEpV7XK03IbXdHmOXSdhbOYr0B5iS3E8uHb+hT7io=`,
         公钥: "MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAIvTBLxZq7WjEqcLDwQPhYl3BKepKuNpTy6+jQwuM+RPfPnRchFBUYT+hWgOs9WJxltPlYarqcNY5yrstH0zqK0CAwEAAQ==",
       },
