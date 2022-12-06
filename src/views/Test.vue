@@ -1,5 +1,5 @@
 <template>
-  <div class="test">
+  <div class="app-container">
     <h1>Hello</h1>
     <p>{{ arr }}</p>
     <p>obj: {{ obj }}</p>
@@ -8,6 +8,7 @@
 </template>
 
 <script>
+
 export default {
   name: "Test",
   data() {
@@ -25,8 +26,12 @@ export default {
       this.obj.b = "new Porperty";
       console.log(this.obj);
       console.log(this.arr);
-      
     },
+  },
+  created() {
+    axios.get("/hello").then((res) => {
+      console.log(res);
+    });
   },
 };
 </script>

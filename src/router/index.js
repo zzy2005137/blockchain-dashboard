@@ -32,10 +32,6 @@ import Layout from "@/layout";
  */
 export const constantRoutes = [
   {
-    path: "/test",
-    component: () => import("@/views/Test.vue"),
-  },
-  {
     path: "/login",
     component: () => import("@/views/login/login"),
     hidden: true,
@@ -146,6 +142,63 @@ export const constantRoutes = [
   //     },
   //   ],
   // },
+
+  // {
+  //   path: "/test",
+  //   component: () => import("@/views/Test.vue"),
+  // },
+
+  {
+    path: "/test",
+    component: Layout,
+    children: [
+      {
+        path: "index",
+        name: "Test",
+        component: () => import("@/views/Test.vue"),
+        meta: { title: "测试页面", icon: "form" },
+      },
+    ],
+  },
+  {
+    path: "/mainTask",
+    component: Layout,
+    children: [
+      {
+        path: "mainTask",
+        name: "mainTask",
+        component: () => import("@/views/mainTask/index.vue"),
+        meta: { title: "主任务页面", icon: "form" },
+      },
+    ],
+  },
+  {
+    path: "/subTask",
+    component: Layout,
+    children: [
+      {
+        path: "subTask",
+        name: "subTask",
+        component: () => import("@/views/subTask/index.vue"),
+        meta: { title: "子任务页面", icon: "form" },
+      },
+    ],
+  },
+
+  {
+    path: "/permission",
+    component: Layout,
+    children: [
+      {
+        path: "permission",
+        name: "permission",
+        component: () => import("@/views/permission/index.vue"),
+        meta: { title: "权限管理", icon: "form", roles: ['admin'] },
+      },
+    ],
+  },
+
+
 
   // 404 page must be placed at the end !!!
   { path: "*", redirect: "/404", hidden: true },

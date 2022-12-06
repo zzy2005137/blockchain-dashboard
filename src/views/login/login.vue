@@ -7,7 +7,7 @@
       label-position="left"
     >
       <div class="title-container">
-        <h3 class="title">电力物资检测系统登录示例</h3>
+        <h3 class="title">基于区块链的网络化协同制造平台示例</h3>
       </div>
       <el-select
         v-model="value"
@@ -60,20 +60,24 @@ export default {
       redirect: "/",
       accountList: [
         {
-          accountId: "465153",
-          userName: "用户1-南京",
+          accountId: "465152",
+          userName: "管理员",
+        },
+        {
+          accountId: "465151",
+          userName: "用户1",
         },
         {
           accountId: "465153",
-          userName: "用户2-南京",
+          userName: "用户2",
         },
         {
           accountId: "465154",
-          userName: "用户3-苏州",
+          userName: "用户3",
         },
         {
           accountId: "465155",
-          userName: "用户4-泰州",
+          userName: "用户4",
         },
       ],
       value: "",
