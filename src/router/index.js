@@ -79,57 +79,57 @@ export const constantRoutes = [
   //   ],
   // },
 
-  {
-    path: "/record",
-    component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "Record",
-        component: () => import("@/views/record/index"),
-        meta: { title: "检测数据", icon: "form" },
-      },
-    ],
-  },
+  // {
+  //   path: "/record",
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: "index",
+  //       name: "Record",
+  //       component: () => import("@/views/record/index"),
+  //       meta: { title: "检测数据", icon: "form" },
+  //     },
+  //   ],
+  // },
 
-  {
-    path: "/history",
-    component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "History",
-        component: () => import("@/views/history/index"),
-        meta: { title: "历史更新", icon: "form" },
-      },
-    ],
-  },
-  {
-    path: "/identity",
-    component: Layout,
-    redirect: "identity/index",
-    meta: { title: "身份管理", icon: "el-icon-s-help" },
-    children: [
-      {
-        path: "index",
-        name: "Identity",
-        component: () => import("@/views/identity/index"),
-        meta: { title: "设备列表", icon: "tree" },
-      },
-      {
-        path: "detail/:id?",
-        name: "detail",
-        component: () => import("@/views/identity/detail"),
-        meta: { title: "设备详情", icon: "tree" },
-      },
-      {
-        path: "register",
-        name: "register",
-        component: () => import("@/views/identity/register"),
-        meta: { title: "身份注册", icon: "form" },
-      },
-    ],
-  },
+  // {
+  //   path: "/history",
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: "index",
+  //       name: "History",
+  //       component: () => import("@/views/history/index"),
+  //       meta: { title: "历史更新", icon: "form" },
+  //     },
+  //   ],
+  // },
+  // {
+  //   path: "/identity",
+  //   component: Layout,
+  //   redirect: "identity/index",
+  //   meta: { title: "身份管理", icon: "el-icon-s-help" },
+  //   children: [
+  //     {
+  //       path: "index",
+  //       name: "Identity",
+  //       component: () => import("@/views/identity/index"),
+  //       meta: { title: "设备列表", icon: "tree" },
+  //     },
+  //     {
+  //       path: "detail/:id?",
+  //       name: "detail",
+  //       component: () => import("@/views/identity/detail"),
+  //       meta: { title: "设备详情", icon: "tree" },
+  //     },
+  //     {
+  //       path: "register",
+  //       name: "register",
+  //       component: () => import("@/views/identity/register"),
+  //       meta: { title: "身份注册", icon: "form" },
+  //     },
+  //   ],
+  // },
   // {
   //   path: "/register",
   //   component: Layout,
@@ -148,27 +148,34 @@ export const constantRoutes = [
   //   component: () => import("@/views/Test.vue"),
   // },
 
-  {
-    path: "/test",
-    component: Layout,
-    children: [
-      {
-        path: "index",
-        name: "Test",
-        component: () => import("@/views/Test.vue"),
-        meta: { title: "测试页面", icon: "form" },
-      },
-    ],
-  },
+  // {
+  //   path: "/test",
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: "index",
+  //       name: "Test",
+  //       component: () => import("@/views/Test.vue"),
+  //       meta: { title: "测试页面", icon: "form" },
+  //     },
+  //   ],
+  // },
   {
     path: "/mainTask",
     component: Layout,
+    meta: { title: "制造任务管理", icon: "form" },
     children: [
       {
-        path: "mainTask",
+        path: "index",
         name: "mainTask",
         component: () => import("@/views/mainTask/index.vue"),
         meta: { title: "主任务页面", icon: "form" },
+      },
+      {
+        path: "mainTask",
+        name: "mainTask",
+        component: () => import("@/views/Test.vue"),
+        meta: { title: "任务创建", icon: "form" },
       },
     ],
   },
@@ -180,7 +187,7 @@ export const constantRoutes = [
         path: "subTask",
         name: "subTask",
         component: () => import("@/views/subTask/index.vue"),
-        meta: { title: "子任务页面", icon: "form" },
+        meta: { title: "子任务详情", icon: "form" },
       },
     ],
   },

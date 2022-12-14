@@ -27,20 +27,19 @@
           </el-descriptions-item>
           <el-descriptions-item>
             <template slot="label"> 预计完工时间 </template>
-            2011-10-08
+            2022-10-08
           </el-descriptions-item>
           <el-descriptions-item>
             <template slot="label"> 验收标准 </template>
-            点击查看
+            <el-button plain type="primary" size="small">点击查看</el-button>
           </el-descriptions-item>
           <el-descriptions-item>
             <template slot="label"> 工艺路线</template>
-            <el-tag size="small">点击查看</el-tag>
+            <el-button plain type="primary" size="small">点击查看</el-button>
           </el-descriptions-item>
           <el-descriptions-item>
             <template slot="label"> 备注信息</template>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Perferendis rem officia eos porro quaerat doloremque quae asd
             Perferendis rem officia eos porro quaerat doloremque quae asd
           </el-descriptions-item>
         </el-descriptions>
@@ -151,15 +150,17 @@
       </el-table-column>
       <el-table-column align="center" label="子任务名称">
         <template slot-scope="scope">
-          {{ scope.row.author }}
+          {{ scope.row.title }}
         </template>
       </el-table-column>
       <el-table-column align="center" label="ID">
-        e10adc3949ba59abbe56e057f20f883e
+        <template slot-scope="scope">
+          {{ scope.row.id }}
+        </template>
       </el-table-column>
       <el-table-column label="制造商" width="110" align="center">
         <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
+          <span>{{ scope.row.manufacturer }}</span>
         </template>
       </el-table-column>
 
@@ -183,7 +184,7 @@
       >
         <template slot-scope="scope">
           <i class="el-icon-time" />
-          <span>{{ scope.row.display_time }}</span>
+          <span>{{ scope.row.timestamp }}</span>
         </template>
       </el-table-column>
 
@@ -208,23 +209,24 @@
 </template>
 
 <script>
-import { getList } from "@/api/table";
+// import { getList } from "@/api/table";
+import list from "./subTasks.json";
 
 export default {
   filters: {
     statusFilter(status) {
       const statusMap = {
-        published: "success",
-        draft: "gray",
-        deleted: "danger",
+        加工中: "success",
+        未接收: "gray",
+        进度预警: "danger",
       };
       return statusMap[status];
     },
   },
   data() {
     return {
-      list: null,
-      listLoading: true,
+      list,
+      // listLoading: true,
       listQuery: {
         page: 1,
         limit: 20,
@@ -235,18 +237,18 @@ export default {
       },
     };
   },
-  created() {
-    this.fetchData();
-  },
-  methods: {
-    fetchData() {
-      this.listLoading = true;
-      getList().then((response) => {
-        this.list = response.data.items;
-        this.listLoading = false;
-      });
-    },
-  },
+  // created() {
+  //   this.fetchData();
+  // },
+  // methods: {
+  //   fetchData() {
+  //     this.listLoading = true;
+  //     getList().then((response) => {
+  //       this.list = response.data.items;
+  //       this.listLoading = false;
+  //     });
+  //   },
+  // },
 };
 </script>
 

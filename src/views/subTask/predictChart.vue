@@ -1,5 +1,7 @@
 <template lang="">
-  <div id="main"></div>
+  <div class="container">
+    <div id="main"></div>
+  </div>
 </template>
 <script>
 import * as echarts from "echarts";

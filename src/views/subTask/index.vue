@@ -27,7 +27,7 @@
           </el-descriptions-item>
           <el-descriptions-item>
             <template slot="label"> 预计完工时间 </template>
-            2011-10-08
+            2022-10-08
           </el-descriptions-item>
           <el-descriptions-item>
             <template slot="label"> 当前进度 </template>
@@ -42,10 +42,9 @@
             Lorem ipsum dolor, sit amet consectetur adipisicing elit.
           </el-descriptions-item>
         </el-descriptions>
-        <transaction></transaction>
-        <transaction></transaction>
-        <transaction></transaction>
-        <transaction></transaction>
+        <div v-for="txData in txDatas" :key="txData.id">
+          <transaction :txData="txData"></transaction>
+        </div>
       </el-col>
     </el-row>
 
@@ -57,8 +56,9 @@
 
 <script>
 import { getList } from "@/api/table";
-import Transaction from "@/components/Transaction";
+import Transaction from "./transaction.vue";
 import predictChart from "./predictChart.vue";
+import txDatas from "./txDatas.json";
 
 export default {
   filters: {
@@ -87,6 +87,7 @@ export default {
         type: undefined,
         sort: "+id",
       },
+      txDatas,
     };
   },
   created() {
